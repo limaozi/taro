@@ -16,7 +16,7 @@ export class gameRoot extends Component {
     }
 
     moveAllCards(){
-        this.pointRoot.children.forEach((cardNode, index) => {
+        this.node.children.forEach((cardNode, index) => {
             console.log('index is', index); 
             const posX = this.pointRoot.children[index].position.x;
             const posY = this.pointRoot.children[index].position.y;
@@ -43,7 +43,7 @@ export class gameRoot extends Component {
     createOneCard(cardId: 1 | 2 | 3 | 4){
         //console.log('createOneCard', cardId);
         const cardNode = new Node('card');
-        this.pointRoot.addChild(cardNode);
+        this.node.addChild(cardNode);
     
         const tran = cardNode.addComponent(UITransform);
         const sprite = cardNode.addComponent(Sprite);
